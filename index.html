@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Accessibility Tool</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Image Accessibility Tool</h1>
+  
+  <div class="image-upload">
+    <input type="file" id="image-input" accept="image/*">
+    <label for="image-input">Upload Image</label>
+  </div>
+  
+  <div id="image-preview">
+    <h3>Original Image</h3>
+    <img id="original-image" src="#" alt="Original Image">
+  </div>
+  
+  <div id="accessibility-controls">
+    <h3>Accessibility Controls</h3>
+    
+    <label for="contrast-slider">Contrast:</label>
+    <input type="range" id="contrast-slider" min="0" max="2" step="0.1" value="1">
+    
+    <label for="brightness-slider">Brightness:</label>
+    <input type="range" id="brightness-slider" min="0" max="2" step="0.1" value="1">
+    
+    <label for="saturation-slider">Saturation:</label>
+    <input type="range" id="saturation-slider" min="0" max="2" step="0.1" value="1">
+    
+    <label for="grayscale-checkbox">
+      <input type="checkbox" id="grayscale-checkbox">
+      Grayscale
+    </label>
+    
+    <label for="invert-checkbox">
+      <input type="checkbox" id="invert-checkbox">
+      Invert Colors
+    </label>
+  </div>
+  
+  <div id="modified-preview">
+    <h3>Modified Image</h3>
+    <canvas id="modified-image" width="0" height="0"></canvas>
+  </div>
+  
+  <button id="download-btn" disabled>Download Modified Image</button>
+  
+  <script src="script.js"></script>
+</body>
+</html>
